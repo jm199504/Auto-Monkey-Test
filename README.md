@@ -20,12 +20,20 @@ python3 main.py -packages com.aaa,com.bbb [-device 123456] [-hours 12] [-throttl
 1. 通过`argparse`接收用户配置
 2. `test_monkey()`方法：
    2.1 终止Monkey进程
+
    2.2 终止Logcat进程
+   
    2.3 下发Logcat开始记录日志
+   
    2.4 下发`adb shell monkey`命令
+   
    2.5 轮询Logcat日志文件，判断是否检测到`Monkey finished`字段
+   
    2.6 终止Monkey进程
+   
    2.7 终止Logcat进程
+   
    2.8 压缩日文文件
+   
    2.9 等待5秒缓存
 3. 根据用户设定运行时长或者无限时循环`test_monkey()`
